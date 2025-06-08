@@ -1,0 +1,29 @@
+
+interface car{
+	public void drive(int speed);
+}
+class Audi implements car{
+	public void drive(int speed) {
+		System.out.println("Audi is Driving");
+	}
+}
+public class lamda {
+	public static void main(String[] args) {
+		car a=new Audi();
+		a.drive(80);
+		
+		//Annonymous class
+		car c=new car() {
+			public void drive(int speed) {
+				System.out.println("hi im Driving tata:"+speed);
+			}
+		};
+		c.drive(80);	
+		//Lamda Expression
+		car c1=(speed)-> {
+				System.out.println("hi im Driving tata:"+speed);
+		};
+		c.drive(90);	
+		
+	}
+}

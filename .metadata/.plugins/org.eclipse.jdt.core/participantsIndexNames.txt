@@ -1,0 +1,3 @@
+INDEX VERSION 1.130
+D:\DATABASE\aits\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2745557086.index
+\db_connection\src

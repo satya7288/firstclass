@@ -1,0 +1,38 @@
+
+
+public class thread extends Thread implements Runnable{
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		//lambda expression 1
+		Runnable r1=() ->{
+			for(int i=0;i<=10;i++) {
+			System.out.println("hi im running");
+			}
+			
+		};
+		
+		//lambda expression 2
+		Runnable r2=() ->{System.out.println("hi im running");};
+		
+		//lambda expression 3
+		Runnable r3=() ->{System.out.println("hi im running");};
+		
+		Thread t1=new Thread(r1);
+		Thread t2=new Thread(r1);
+		Thread t3=new Thread(r1);
+		t1.run();
+		t1.sleep(5000);
+		t2.run();
+		t1.sleep(5000);
+		t3.run();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

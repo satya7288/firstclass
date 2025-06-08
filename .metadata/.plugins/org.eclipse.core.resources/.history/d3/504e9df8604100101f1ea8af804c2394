@@ -1,0 +1,60 @@
+package Collections;
+import java.util.Arrays;
+
+class Treenode {
+    int data;
+    Treenode left;
+    Treenode right;
+
+    public Treenode(int val) {
+        this.data = val;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class Main {
+
+    public static Treenode createbtree(int[] arr, int i, int n) {
+        if (i > n) {
+            return null;
+        }
+
+        Treenode root = new Treenode(arr[i - 1]);
+        root.left = createbtree(arr, 2 * i, n);
+        root.right = createbtree(arr, 2 * i + 1, n);
+
+        return root;
+    }
+
+    public static void pre(Treenode root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        pre(root.left);
+        pre(root.right);
+    }
+    public static void in(Treenode root) {
+    	 if (root == null) {
+             return;
+         }
+         pre(root.left);
+         System.out.print(root.data + " ");
+         pre(root.right);
+    }
+    public static void post(Treenode root) {
+   	 if (root == null) {
+            return;
+        }
+        pre(root.left);
+        System.out.print(root.data + " ");
+        pre(root.right);
+   }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        Treenode btree = createbtree(arr, 1, arr.length);
+        pre(btree);
+    }
+}

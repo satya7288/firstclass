@@ -1,0 +1,21 @@
+//interface
+@FunctionalInterface
+interface car{
+	public void drive();
+}
+//taking another class and inherit the interface
+class Audi implements car{
+	public void drive() {
+		System.out.println("Audi is Driving");
+	}
+}
+//main class
+public class lamda {
+	public static void main(String[] args) {
+		car a=new Audi();
+		a.drive();
+		//Lamda Expression
+		car c1=()-> System.out.println("hi im Driving tata:");
+		c1.drive();	
+	}
+}

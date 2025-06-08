@@ -1,0 +1,35 @@
+import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+public class todo_list extends Application{
+	private ObservableList<String> tasks;
+	
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		TextField textInput=new TextField();
+		textInput.setPromptText("Enter your task");
+		
+		Button add=new Button("Add");
+		Button delete=new Button("Delete");
+		
+		Scene scene=new Scene(textInput);
+		
+		Stage stage=new Stage();
+		stage.setScene(scene);
+		stage.show();
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		launch();
+	}
+
+}

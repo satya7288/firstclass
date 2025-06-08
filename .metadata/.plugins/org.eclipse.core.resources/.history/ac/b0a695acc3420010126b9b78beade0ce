@@ -1,0 +1,22 @@
+package ds;
+
+import java.util.PriorityQueue;
+
+public class priorityQ {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		PriorityQueue<Integer> pq=new PriorityQueue<>();
+		pq.add(10);
+		pq.add(3);
+		pq.add(5);
+		pq.add(11);
+		pq.add(6);
+		pq.add(2);
+		
+		for(Integer v1:pq) {
+			System.out.println(v1);
+		}
+	}
+
+}

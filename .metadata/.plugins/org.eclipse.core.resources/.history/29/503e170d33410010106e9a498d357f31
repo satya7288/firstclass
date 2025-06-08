@@ -1,0 +1,14 @@
+import java.util.*;
+public class Hash_set {
+public static void main(String args[]) {
+	ArrayList<String> hs= new ArrayList<>();
+	hs.add("virat kohli ");
+	hs.add("won ipl trophy ");
+	hs.add("2025");
+	hs.add("virat kohli ");
+	hs.add("won ipl trophy ");
+	hs.add("2025");
+	for(String name:hs) {
+	System.out.println(name);}
+}
+}

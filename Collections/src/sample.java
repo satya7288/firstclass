@@ -1,0 +1,15 @@
+import java.util.*;
+import java.util.Map.Entry;
+public class sample {
+ public static void main(String[] args)
+ {
+	 Map<Integer,String> m=new HashMap<>();
+	   m.put(1,"a");
+	   m.put(2,"b");
+	   m.put(3,"c");
+	   m.put(4,"d");
+	   m.put(5,"e");
+	   System.out.println(m);
+	  
+ }
+}

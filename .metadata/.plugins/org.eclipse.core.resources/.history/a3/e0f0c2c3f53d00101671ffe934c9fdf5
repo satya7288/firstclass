@@ -1,0 +1,19 @@
+
+interface car{
+	public void drive();
+}
+class Audi implements car{
+	public void drive() {
+		System.out.println("Audi is Driving");
+	}
+}
+public class lamda {
+	public static void main(String[] args) {
+		car a=new Audi();
+		a.drive();
+		//Lamda Expression
+		car c1=()-> System.out.println("hi im Driving tata:");
+		c1.drive();	
+		
+	}
+}

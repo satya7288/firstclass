@@ -1,0 +1,16 @@
+package ds;
+class Node {
+	int val;
+	Node left,right;
+	
+	Node(int key){
+		key=val;
+		left=right=null;
+	}
+	public static void main(String[] args) {
+		
+	}
+}
+class binarytree{
+	
+}

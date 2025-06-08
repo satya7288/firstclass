@@ -1,0 +1,28 @@
+
+
+public class thread implements Runnable{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(Thread.activeCount());
+		//lambda expression 1
+		Runnable r1=() ->{System.out.println("hi im running");};
+		
+		//lambda expression 1
+		Runnable r2=() ->{System.out.println("hi im running");};
+		
+		//lambda expression 1
+		Runnable r3=() ->{System.out.println("hi im running");};
+		
+		r1.run();
+		r2.run();
+		r3.run();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.PreparedStatement;
+
+public class connect  {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//database connection
+		try {
+		//step1: load the driver class
+		Class.forName("com.mysql.jdbc.Driver");
+		//step2: establish connection
+		Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/aits", "root", "root");
+		System.out.println(con);
+		//step3:transporting methods with authentication
+		java.sql.PreparedStatement pst= con.prepareStatement("insert into stdemo values(101,'raju','raju@gmail.com')");
+		//step4:updating
+		int i=pst.executeUpdate();
+		System.out.println("sucess"+i);
+		//step5:connection close
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

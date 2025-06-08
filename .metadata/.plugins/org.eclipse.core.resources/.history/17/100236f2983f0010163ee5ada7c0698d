@@ -1,0 +1,23 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class connect  {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//database connection
+		try {
+		//step1: load the driver class
+		Class.forName("com.mysql.jdbc.Driver");
+		//step2: establish connection
+		Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/aits", "root", "root");
+		System.out.println(con);
+		//step3:transporting methods with authentication
+		//step4:updating
+		//step5:connection close
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
